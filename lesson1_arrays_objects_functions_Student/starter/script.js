@@ -31,12 +31,8 @@ function deleteQuote(id) {
 function updateQuote(id, updatedQuote) {
   // TODO: Find the quote by id and update its properties
   let newQuote = quotes.findIndex( q => q.id === id)
-  let {content,author} = updatedQuote
-  if(content !== undefined){
-    quotes[newQuote].content = content 
-  }
-  if(author !== undefined){
-    quotes[newQuote].author = author
+  if(newQuote !== -1){
+    quotes[newQuote] = {...quotes[newQuote],...updatedQuote}
   }
 }
 
