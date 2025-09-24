@@ -1,0 +1,32 @@
+DOM ใช้กับเอกสารอะไรก็ได้ ที่เป็นลำดับชั้น เพราะ ลพดับชั้น จะทำให้เกิดต้นไม้
+DOM เอา HTML มาสร้างเป็น ต้นไม้
+
+การที่มีโค้ด js ที่เยอะ หรือ โดยที่มีการอ้างถึง DOM
+เราเบยแนบ <script src="main.js"></script> ไว้ก่อน </body> เพื่อให้เพจโหลดเสร็จก่อน ไม่งั้นจะเกิดปัญหา
+
+เขียนตามโครงสร้างในห้องเรียน
+HTML (element node)
+ |-head (element node)
+ |  |-Dom Document (text node)
+ |-body (element node) id='123' (attribute node)
+    |-div (element node) 
+    |   |-p (element node)
+    |   | |-#1 (text node)
+    |   |-p (element node)
+    |     |-#2 (text node)
+    |-div (element node)
+        |-#3 (text node)
+
+root element แรกของ HTML คือ html
+
+*** window.document === document => root node ***
+
+Node Name => บอกชื่อ tag
+Node Type => บอก value
+| Node Type              | `nodeType` value |
+| ---------------------- | ---------------- |
+| Element                | 1                |
+| Attribute              | 2                |
+| Text                   | 3                |
+| Comment                | 8                |
+| Document               | 9                |
